@@ -11,7 +11,6 @@ export default function StudentWork() {
       <MySnackHeader />
       <MySnackList />
       <MySnackFooter />
-
       <p> Student output will go here</p>
     </div>
   );
