@@ -14,11 +14,11 @@ export default function BugEffectLoop() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    setCount(count + 1);
-  });
+    setCount(count);
+  }, [count]);
 
-  return <p>Bug 1 Count: {count}</p>;
+  return <p>Bug 1 Count: {count + 1}</p>;
 }
 
 // Explanation:
-// (Write your explanation here)
+// setCount function was set inside the useEffect so the count could cascade endlessly, added count to the dependency array and the + 1 to the return.
