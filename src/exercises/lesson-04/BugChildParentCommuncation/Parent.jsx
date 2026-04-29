@@ -12,7 +12,10 @@ export default function Parent() {
     <div>
       <h2>Parent-Child Communication</h2>
       <p>Counter: {count}</p>
-      <Child />
+      <Child onAction={increment} />
     </div>
   );
 }
+
+// Parent needed to pass a function to the child: onAction={increment} so that the child could implement the
+// function itself.
