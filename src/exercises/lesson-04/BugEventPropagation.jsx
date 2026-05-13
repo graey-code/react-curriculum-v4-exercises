@@ -6,7 +6,8 @@ export default function BugEventPropagation() {
     alert("RED BOX CLICKED ❌ Don't show me!");
   }
 
-  function handleInnerClick() {
+  function handleInnerClick(e) {
+    e.stopPropagation();
     alert('Button Clicked ✅');
   }
 
@@ -22,3 +23,5 @@ export default function BugEventPropagation() {
     </>
   );
 }
+
+// needed to add the e.stopPropagation () inside the function handler of the child element with an 'e' prop.
